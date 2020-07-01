@@ -1,0 +1,99 @@
+Magic 271485
+Revision Verdi_O-2018.09
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 144 1920 1017 223 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/yuhong/DIC/DIC2020/DIC_HW5/hw5/SOBEL.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 1566594333.646925 1566662333.646925
+cursor 1566657000.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 22
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home/yuhong/DIC/DIC2020/DIC_HW5/hw5/SOBEL.fsdb"
+addSignal -h 15 /testfixture/u_sobel/ready
+addSignal -h 15 -holdScope busy
+addSignal -h 15 -holdScope csel[1:0]
+addSignal -h 15 -holdScope clk
+addSignal -h 15 -holdScope reset
+addSignal -h 15 -holdScope state[2:0]
+addSignal -h 15 -holdScope r1_done
+addSignal -h 15 -holdScope r2_done
+addSignal -h 15 -holdScope r3_done
+addSignal -h 15 -holdScope r1_en
+addSignal -h 15 -holdScope r2_en
+addSignal -h 15 -holdScope r3_en
+addSignal -h 15 -UNSIGNED -UDEC -holdScope row1_cnt[16:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope row1_cnt_limit[16:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope row2_cnt[16:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope row2_cnt_limit[16:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope total_cnt[11:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope stop_cnt[16:0]
+addSignal -h 15 -holdScope stop_en
+addSignal -h 15 -holdScope cwr
+addSignal -h 15 -UNSIGNED -UDEC -holdScope caddr_wr[15:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope cdata_wr[7:0]
+addSignal -h 15 -holdScope total_cnt_en
+addSignal -h 15 -UNSIGNED -UDEC -holdScope row3_cnt[16:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope row3_cnt_limit[16:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope iaddr[16:0]
+addSignal -h 15 -holdScope idata[7:0]
+addSignal -h 15 -holdScope buffer[0:8]
+addSignal -h 15 -holdScope crd
+addSignal -h 15 -UNSIGNED -UDEC -holdScope SBY_cnt[15:0]
+addGroup "G2"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home/yuhong/DIC/DIC2020/DIC_HW5/hw5/SOBEL.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/testfixture"
+"/testfixture/u_sobel"
+
+SCOPE_LIST_BEGIN
+"/testfixture"
+"/testfixture/u_sobel"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+
